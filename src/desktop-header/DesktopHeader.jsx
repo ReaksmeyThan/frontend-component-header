@@ -27,8 +27,26 @@ class DesktopHeader extends React.Component {
   }
 
   renderMainMenu() {
-    const { mainMenu } = this.props;
-    return <DesktopMainMenuSlot menu={mainMenu} />;
+    const { intl } = this.props;
+    const mainMenuItems = [
+      {
+        type: 'item',
+        href: getConfig().LMS_BASE_URL,
+        content: 'Home',
+      },
+      {
+        type: 'item',
+        href: `${getConfig().LMS_BASE_URL}/dashboard`,
+        content: 'My Courses',
+      },
+      {
+        type: 'item',
+        href: `${getConfig().LMS_BASE_URL}/courses`,
+        content: 'Explore Courses'
+      }
+      //intl.formatMessage(messages['header.user.menu.dashboard'])
+    ]
+    return <DesktopMainMenuSlot menu={mainMenuItems} />;
   }
 
   renderSecondaryMenu() {
