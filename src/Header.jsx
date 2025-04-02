@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
-import Responsive from 'react-responsive';
-import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
-import { AppContext } from '@edx/frontend-platform/react';
 import {
   APP_CONFIG_INITIALIZED,
   ensureConfig,
-  mergeConfig,
   getConfig,
+  mergeConfig,
   subscribe,
 } from '@edx/frontend-platform';
+import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { AppContext } from '@edx/frontend-platform/react';
+import React, { useContext } from 'react';
+import Responsive from 'react-responsive';
 
 import PropTypes from 'prop-types';
 import DesktopHeaderSlot from './plugin-slots/DesktopHeaderSlot';
@@ -77,11 +77,11 @@ const Header = ({
         content: intl.formatMessage(messages['header.user.menu.account.settings']),
       },
       // Users should only see Order History if have a ORDER_HISTORY_URL define in the environment.
-      ...(config.ORDER_HISTORY_URL ? [{
-        type: 'item',
-        href: config.ORDER_HISTORY_URL,
-        content: intl.formatMessage(messages['header.user.menu.order.history']),
-      }] : []),
+      // ...(config.ORDER_HISTORY_URL ? [{
+      //   type: 'item',
+      //   href: config.ORDER_HISTORY_URL,
+      //   content: intl.formatMessage(messages['header.user.menu.order.history']),
+      // }] : []),
       {
         type: 'item',
         href: config.LOGOUT_URL,
