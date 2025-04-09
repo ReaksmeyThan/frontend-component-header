@@ -37,15 +37,14 @@ class DesktopHeader extends React.Component {
       {
         type: 'item',
         href: `${getConfig().LMS_BASE_URL}/dashboard`,
-        content: 'My Courses',
+        content: intl.formatMessage(messages['dashboard.mycourses']),
       },
       {
         type: 'item',
         href: `${getConfig().LMS_BASE_URL}/courses`,
-        content: 'Explore Courses'
-      }
-      //intl.formatMessage(messages['header.user.menu.dashboard'])
-    ]
+        content: intl.formatMessage(messages['Dashboard.NoCoursesView.exploreCoursesButton']),
+      },
+    ];
     return <DesktopMainMenuSlot menu={mainMenuItems} />;
   }
 
