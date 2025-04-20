@@ -111,6 +111,21 @@ const messages = defineMessages({
     defaultMessage: 'App',
     description: 'The aria label for the app Nav',
   },
+  'header.label.home': {
+    id: 'header.label.home',
+    defaultMessage: 'Home',
+    description: 'Home menu item',
+  },
+  'header.label.myCourse': {
+    id: 'header.label.myCourse',
+    defaultMessage: 'My Course',
+    description: 'My Course menu item',
+  },
+  'header.label.exploreCourse': {
+    id: 'header.label.exploreCourse',
+    defaultMessage: 'Explore Course',
+    description: 'Explore Course menu item',
+  },
 });
 
 export default messages;
